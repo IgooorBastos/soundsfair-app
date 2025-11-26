@@ -1,6 +1,19 @@
+import dynamic from 'next/dynamic';
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import DCACalculator from "@/app/components/DCACalculator";
+
+// Dynamically import DCACalculator with no SSR to prevent bundling issues
+const DCACalculator = dynamic(() => import('@/app/components/DCACalculator'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center min-h-[400px]">
+      <div className="text-center">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-brand-yellow"></div>
+        <p className="mt-4 text-gray-400">Loading calculator...</p>
+      </div>
+    </div>
+  ),
+});
 
 export const metadata = {
   title: "DCA Calculator - Compare Bitcoin vs Traditional Assets | soundsfair",
