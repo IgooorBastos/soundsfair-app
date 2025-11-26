@@ -19,6 +19,7 @@
     "recharts": "^3.5.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
