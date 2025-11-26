@@ -1,26 +1,16 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #000000;
   --foreground: #ffffff;
   --primary: #FFD000;
   --primary-dark: #ccb100;
-}
-
-@theme inline {
-  /* Colors */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
 
   /* Brand colors */
-  --color-brand-yellow: #FFD000;
-  --color-brand-black: #000000;
-
-  /* Typography */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --brand-yellow: #FFD000;
+  --brand-black: #000000;
 }
 
 body {
