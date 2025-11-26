@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #FFD000;
+  --primary-dark: #ccb100;
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+
+  /* Brand colors */
+  --color-brand-yellow: #FFD000;
+  --color-brand-black: #000000;
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes */
+.text-brand-yellow {
+  color: #FFD000;
+}
+
+.bg-brand-yellow {
+  background-color: #FFD000;
+}
+
+.bg-brand-black {
+  background-color: #000000;
+}
+
+.border-brand-yellow {
+  border-color: #FFD000;
+}
