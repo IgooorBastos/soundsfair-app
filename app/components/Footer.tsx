@@ -7,17 +7,17 @@ export default function Footer() {
 
   const footerLinks = {
     learn: [
-      { label: "Learning Path", href: "/learn" },
-      { label: "Level 1: Fiat System", href: "/learn#level-1" },
-      { label: "Level 2: Banking", href: "/learn#level-2" },
-      { label: "Level 3: Bitcoin Basics", href: "/learn#level-3" },
-      { label: "All Lessons", href: "/learn" },
+      { label: "All Lessons", href: "/lessons" },
+      { label: "Level 5: Store of Value", href: "/lessons/level-5-store-of-value" },
+      { label: "Level 6: Economic Freedom", href: "/lessons/level-6-economic-freedom" },
+      { label: "Level 7: Geopolitical Future", href: "/lessons/level-7-geopolitical-future" },
+      { label: "FAQ", href: "/faq" },
     ],
     resources: [
-      { label: "DCA Calculator", href: "#" },
+      { label: "DCA Calculator", href: "/tools/dca" },
+      { label: "Glossary", href: "/glossary" },
       { label: "Video Library", href: "#" },
       { label: "Reading List", href: "#" },
-      { label: "Glossary", href: "#" },
     ],
     company: [
       { label: "About Us", href: "/about" },
