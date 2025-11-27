@@ -169,9 +169,15 @@ export async function getGlossary(): Promise<GlossaryTerm[]> {
       ? relatedMatch[1].split(',').map(t => t.trim())
       : [];
 
+    // Convert markdown to HTML for definition
+    const processedDefinition = await remark()
+      .use(gfm)
+      .use(html)
+      .process(definition.trim());
+
     terms.push({
       term: term.trim(),
-      definition: definition.trim(),
+      definition: String(processedDefinition),
       relatedTerms,
     });
   }
@@ -212,10 +218,16 @@ export async function getFAQs(): Promise<FAQ[]> {
     else if (questionIndex <= 18) currentCategory = 'Philosophical & Social';
     else currentCategory = 'Miscellaneous';
 
+    // Convert markdown to HTML for detailed answer
+    const processedDetailedAnswer = await remark()
+      .use(gfm)
+      .use(html)
+      .process(detailedAnswer.trim());
+
     faqs.push({
       question: question.trim(),
       shortAnswer: shortAnswer.trim(),
-      detailedAnswer: detailedAnswer.trim(),
+      detailedAnswer: String(processedDetailedAnswer),
       category: currentCategory,
     });
   }
